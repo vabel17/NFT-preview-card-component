@@ -1,0 +1,214 @@
+/* CSS Setup */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+* {
+    margin: 0;
+    outline: none;
+}
+  
+html, body {
+    height: 100%;
+}
+  
+body {
+    -webkit-font-smoothing: antialiased;
+    transition: none !important;
+}
+  
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+  
+input, button, textarea, select {
+    font: inherit;
+}
+  
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* Project CSS */
+
+:root {
+    --cyan: hsl(178, 100%, 50%);
+    --blue: hsl(215, 51%, 70%);
+}
+
+* {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: hsl(217, 54%, 11%);
+}
+
+main {
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 12px;
+    padding: 1.5rem;
+    width: 22rem;
+    height: fit-content;
+    box-shadow: 0 0 50px 10px hsla(0, 0%, 0%, 0.4);
+}
+
+/* Preview Image and its overlay animation */
+
+.img-lnk {
+    position: relative;
+    display: flex;
+    margin-bottom: 1.4rem;
+}
+
+.img-lnk img {
+    border-radius: 8px;
+}
+
+.img-ovrly {
+    display: none;
+    position: absolute;
+    border-radius: 8px;
+    background-color: hsla(178, 100%, 50%, 0.4);
+    width: 100%;
+    height: 100%;
+}
+
+.img-ovrly img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img-lnk:hover .img-ovrly {
+    display: flex;
+}
+
+h2 a {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+h2 a:hover {
+    color: var(--cyan);
+}
+
+p.main {
+    margin-top: 1.2rem;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: var(--blue);
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+}
+
+.prchs-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.prchs-flx {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 1.4rem;
+}
+
+p.prchs, p.prchs span {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.frst {
+    color: var(--cyan);
+}
+
+.scnd {
+    color: var(--blue);
+}
+
+hr {
+    border: 1px solid hsl(215, 32%, 27%);
+    border-radius: 50%;
+}
+
+.prfl-info {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.6rem;
+}
+
+.prfl-info img {
+    width: 2rem;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.prfl-info p {
+    color: var(--blue);
+    font-weight: 300;
+}
+
+.prfl-info a {
+    color: white;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.prfl-info a:hover {
+    color: var(--cyan);
+}
+
+footer {
+    color: var(--blue);
+    position: absolute;
+    bottom: 1rem;
+}
+
+footer a {
+    color: white;  
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--cyan);  
+}
+
+@media screen and (max-width: 420px) {
+
+    * {
+        font-size: 14px;
+    }
+
+    footer {
+        display: none;
+    }
+
+    .prfl-info {
+        margin-bottom: 0rem;
+    }
+    
+}
+
+@media screen and (max-height: 760px) {
+
+    footer {
+        display: none;
+    }
+    
+}
